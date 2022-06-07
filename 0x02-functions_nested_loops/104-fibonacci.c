@@ -18,7 +18,7 @@ int main(void)
 	for (i = 3; i <= 98; i++)
 	{
 		sum_of_two = first + second;
-		printf("%lu", sum_of_two);
+		printf("%llu", sum_of_two);
 		first = second;
 		second = sum_of_two;
 
