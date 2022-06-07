@@ -22,7 +22,6 @@ int main(void)
 		first = second;
 		second = sum_of_two;
 
-
 		if (i < 98)
 			printf(", ");
 	}
