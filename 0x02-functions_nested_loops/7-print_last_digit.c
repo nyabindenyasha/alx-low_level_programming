@@ -2,6 +2,7 @@
 
 
 /**
+ * print_last_digit - check description
  * @r: An integer input
  * Description: This function prints the last digit of a number
  * Return: last digit of number r
