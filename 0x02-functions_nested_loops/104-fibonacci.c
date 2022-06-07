@@ -15,14 +15,14 @@ int main(void)
 	unsigned long sum_of_two = 3;
 
 	printf("1, 2, ");
-	for (i = 0; i < 98; i++)
+	for (i = 0; i < 96; i++)
 	{
 		sum_of_two = first + second;
 		printf("%ld", sum_of_two);
 		first = second;
 		second = sum_of_two;
 
-		if (i != 97)
+		if (i != 95)
 			printf(", ");
 	}
 	printf("\n");
