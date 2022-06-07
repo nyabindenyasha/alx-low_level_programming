@@ -7,9 +7,12 @@
  */
 void times_table(void)
 {
-		for (int row = 0; row < 10; row++)
+	int row;
+	int j;
+
+	for (row = 0; row < 10; row++)
 	{
-		for (int j = 0; j < 10; j++)
+		for (j = 0; j < 10; j++)
 		{
 			int value = 0;
 			value = j * row;
