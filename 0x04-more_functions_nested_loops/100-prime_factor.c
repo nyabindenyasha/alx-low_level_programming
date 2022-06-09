@@ -9,17 +9,29 @@
 int main(void)
 {
 
-	unsigned int long n = 612852475143;
-	unsigned int long a = (int)sqrt(n);
+	unsigned long maximum_prime, i;
 
-	while (1)
+	unsigned long number = 612852475143;
+
+	while (number % 2 == 0)
 	{
-		if (n % a == 0)
-		{
-			printf("%lu \n", n / a);
-			break;
-		}
-		a--;
+		number = number / 2;
 	}
+	for (i = 3; i < sqrt(number); i += 2)
+	{
+		while (number % i == 0)
+		{
+			maximum_prime = i;
+			number = number / i;
+		}
+	}
+
+	if (number > 2)
+		maximum_prime = number;
+	else
+		maximum_prime = 2;
+
+	printf("%lu\n", maximum_prime);
+
 	return (0);
 }
