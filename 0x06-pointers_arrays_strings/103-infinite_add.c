@@ -6,6 +6,7 @@
  * @n2: 2nd number
  * @r: buffer to store the result
  * @size_r: buffer size
+ * Return: the result of addition.
  *
  */
 char *infinite_add(char *n1, char *n2, char *r, int size_r)
