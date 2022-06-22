@@ -1,21 +1,6 @@
 #include "main.h"
 
 /**
- * _sqrt_recursion - a fxn that returns natural square root of a number.
- * @n: input number
- *
- * Return: if sqrt, return sqrt, else return -1
- */
-
-int check_square_root(int a, int b);
-int _sqrt_recursion(int n)
-{
-	if (n == 0)
-		return (0);
-	return (check_square_root(1, n));
-}
-
-/**
  * check_square_root - check for square root of a
  * @a: number to square
  * @b: number to find square root
@@ -34,4 +19,18 @@ int check_square_root(int a, int b)
 		return (-1);
 	}
 	return (check_square_root(a + 1, b));
+}
+
+/**
+ * _sqrt_recursion - a fxn that returns natural square root of a number.
+ * @n: input number
+ *
+ * Return: if sqrt, return sqrt, else return -1
+ */
+
+int _sqrt_recursion(int n)
+{
+	if (n == 0)
+		return (0);
+	return (check_square_root(1, n));
 }
