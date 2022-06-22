@@ -17,8 +17,8 @@ int is_prime_number(int n)
 /**
  * _prime_check -  a function that returns 1 if the input integer is a prime
  * number, otherwise return 0.
- * @a: factor to check
- * @b: number to check if prime
+ * @x: factor to check
+ * @y: number to check if prime
  * Return: 1 if prime or 0 if not
  */
 
