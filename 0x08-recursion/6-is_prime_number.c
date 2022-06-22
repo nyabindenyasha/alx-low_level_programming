@@ -31,7 +31,6 @@ int _prime_check(int a, int b)
  * Return: 1 if prime number, 0 if not
  */
 
-int _prime_check(int a, int b);
 int is_prime_number(int n)
 {
 	if (n == 2)
