@@ -3,7 +3,10 @@
 /**
  * _sqrt_recursion - a function that returns the natural square root of
  * a number.
+ * Description: a function that returns the natural square root of
+ * a number.
  * @n: input number
+ * 
  * Return: if sqrt, return sqrt, else return -1
  */
 
@@ -17,8 +20,11 @@ int _sqrt_recursion(int n)
 
 /**
  * check_square_root - check if a number has a square root.
+ * Description: - check if a number has a square root.
  * @a: number to square
+ * 
  * @b: number to find square root of
+ * 
  * Return: -1 if none or square root of b
  */
 
