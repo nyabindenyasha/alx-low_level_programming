@@ -7,6 +7,7 @@
  * Return: if sqrt, return sqrt, else return -1
  */
 
+int check_square_root(int a, int b);
 int _sqrt_recursion(int n)
 {
 	if (n == 0)
