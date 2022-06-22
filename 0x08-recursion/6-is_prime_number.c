@@ -1,7 +1,7 @@
 #include "main.h"
 
 /**
- * _prime_check -  a function that checks if b is prime.
+ * _prime_check - a fxn that checks if b is prime.
  * @a: factor to check
  * @b: number to check if prime
  *
@@ -25,8 +25,7 @@ int _prime_check(int a, int b)
 }
 
 /**
- * is_prime_number -  a function that returns 1 if the input integer is a
- * prime number, otherwise return 0.
+ * is_prime_number - a fxn that returns 1 if prime, 0 if not
  * @n: input number
  *
  * Return: 1 if prime number, 0 if not
