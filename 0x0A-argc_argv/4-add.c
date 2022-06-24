@@ -3,6 +3,26 @@
 #include <ctype.h>
 
 /**
+ * is_digit - checks if a string is a valid digit.
+ * @s: string input
+ *
+ * Return: 1 is s is a valid integer. 0 otherwise
+ */
+int is_digit(char *s)
+{
+	while (*s)
+	{
+		if (*s < '0' || *s > '9')
+		{
+			return (0);
+		}
+		s++;
+	}
+
+	return (1);
+}
+
+/**
  * main - program that adds positive numbers
  * @argc: argument count
  * @argv: argument values
@@ -38,24 +58,4 @@ int main(int argc, char **argv)
 	printf("%d\n", total);
 
 	return (0);
-}
-
-/**
- * is_digit - checks if a string is a valid digit.
- * @s: string input
- *
- * Return: 1 is s is a valid integer. 0 otherwise
- */
-int is_digit(char *s)
-{
-	while (*s)
-	{
-		if (*s < '0' || *s > '9')
-		{
-			return (0);
-		}
-		s++;
-	}
-
-	return (1);
 }
