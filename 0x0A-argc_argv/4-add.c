@@ -30,7 +30,6 @@ int is_digit(char *s)
  * Return: 0 if successful, 1 if Error occurs
  */
 
-int is_digit(char *s);
 int main(int argc, char **argv)
 {
 	int i;
