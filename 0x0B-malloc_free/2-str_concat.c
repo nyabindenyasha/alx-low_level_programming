@@ -12,20 +12,14 @@
 char *str_concat(char *s1, char *s2)
 {
 	char *new_string;
-	int size_s1 = 0;
-	int size_s2 = 0;
-	int i = 0;
+	int size_s1, size_s2, i = 0;
 
 	if (s1 == NULL)
-	{
 		s1 = "";
-	}
+	
 	if (s2 == NULL)
-	{
 		s2 = "";
-	}
 
-	i = 0;
 	while (*(s1 + i))
 	{
 		size_s1++;
