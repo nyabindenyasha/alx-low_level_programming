@@ -13,9 +13,8 @@ char **strtow(char *str)
 	int i, j, k, l, length, count = 0;
 
 	if (str == NULL || *str == '\0')
-	{
 		return (NULL);
-	}
+
 	for (; str[i]; i++)
 	{
 		if ((str[i] != ' ' || *str != '\t') &&
