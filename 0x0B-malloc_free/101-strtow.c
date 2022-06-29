@@ -1,52 +1,84 @@
 #include "main.h"
 #include <stdlib.h>
+#include "free_memory.c"
 
 /**
- * strtow - A function that splits a string into words
- * @str: An input pointer of the string to split
- * Return: a pointer to an array of strings or-else NULL
+ * strtow - function that splits string into words
+ * @str: string being passed
+ * Return: null if string is empty or null or function fails
  */
+
+int number(char *str);
+void free_everything(char **string, int i);
 
 char **strtow(char *str)
 {
-	char **array;
-	int i, j, k, l, length, count = 0;
+	int total_words = 0, b = 0, c = 0, length = 0;
+	char **words, *found_word;
 
-	if (str == NULL || *str == '\0')
+	if (str == 0 || *str == 0)
 		return (NULL);
-
-	for (; str[i]; i++)
+	total_words = number(str);
+	if (total_words == 0)
+		return (NULL);
+	words = malloc((total_words + 1) * sizeof(char *));
+	if (words == 0)
+		return (NULL);
+	for (; *str != '\0' && b < total_words;)
 	{
-		if ((str[i] != ' ' || *str != '\t') &&
-			((str[i + 1] == ' ' || str[i + 1] == '\t') || str[i + 1] == '\n'))
-			count++;
-	}
-	if (count == 0)
-		return (NULL);
-	array = malloc(sizeof(char *) * (count + 1));
-	if (array == NULL)
-		return (NULL);
-	for (i = 0; str[i] != '\0' && k < count; i++)
-	{
-		if (str[i] != ' ' || str[i] != '\t')
+		if (*str == ' ')
+			str++;
+		else
 		{
-			length = 0;
-			j = i;
-			while ((str[j] != ' ' || str[j] != '\t') && str[j] != '\0')
-				j++, length++;
-			array[k] = malloc((length + 1) * sizeof(char));
-			if (array[k] == NULL)
+			found_word = str;
+			for (; *str != ' ' && *str != '\0';)
 			{
-				for (k = k - 1; k >= 0; k++)
-					free(array[k]);
-				free(array);
+				length++;
+				str++;
+			}
+			words[b] = malloc((length + 1) * sizeof(char));
+			if (words[b] == 0)
+			{
+				free_everything(words, b);
 				return (NULL);
 			}
-			for (l = 0; l < length; l++, i++)
-				array[k][l] = str[i];
-			array[k++][l] = '\0';
+			while (*found_word != ' ' && *found_word != '\0')
+			{
+				words[b][c] = *found_word;
+				found_word++;
+				c++;
+			}
+			words[b][c] = '\0';
+			b++;
+			c = 0;
+			length = 0;
+			str++;
 		}
 	}
-	array[k] = NULL;
-	return (array);
+	return (words);
+}
+
+/**
+ * number - function to calculate number of words
+ * @str: string being passed to check for words
+ *
+ * Return: number of words
+ */
+
+int number(char *str)
+{
+	int a, num = 0;
+
+	for (a = 0; str[a] != '\0'; a++)
+	{
+		if (*str == ' ')
+			str++;
+		else
+		{
+			for (; str[a] != ' ' && str[a] != '\0'; a++)
+				str++;
+			num++;
+		}
+	}
+	return (num);
 }
