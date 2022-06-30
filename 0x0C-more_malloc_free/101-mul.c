@@ -1,32 +1,7 @@
 #include "main.h"
-
-/**
- * _atoi - convert a string to an integer.
- * @s: char type string
- * Return: integer converted
- */
-
-int _atoi(const char *s)
-{
-	int sign = 1;
-	unsigned long int result = 0, first_num, i;
-
-	for (first_num = 0; !(s[first_num] >= 48 && s[first_num] <= 57); first_num++)
-	{
-		if (s[first_num] == '-')
-		{
-			sign *= -1;
-		}
-	}
-
-	for (i = first_num; s[i] >= 48 && s[i] <= 57; i++)
-	{
-		result *= 10;
-		result += (s[i] - 48);
-	}
-
-	return (sign * result);
-}
+#include <stdlib.h>
+#include "3-puts.c"
+#include "100-atoi.c"
 
 /**
  * print_int - prints an integer.
