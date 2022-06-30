@@ -1,6 +1,22 @@
 #include "main.h"
 #include <stdlib.h>
-#include "1-memcpy.c"
+// #include "1-memcpy.c"
+
+/**
+ * _memcpy - copy memory data from src to dest
+ * @dest: memory destination
+ * @src: memory source
+ * @n: size of new memory
+ */
+void _memcpy(void *dest, void *src, size_t n)
+{
+	size_t i;
+	char *csrc = (char *)src;
+	char *cdest = (char *)dest;
+
+	for (i = 0; i < n; i++)
+		cdest[i] = csrc[i];
+}
 
 /**
  * *_realloc - reallocates a memory block using malloc and free
