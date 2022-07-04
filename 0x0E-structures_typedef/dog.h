@@ -3,7 +3,6 @@
 
 /**
   * struct dog - struct dog.
-  * @d: pointer to an element of type dog
   * @name: nameof dog.
   * @age: age of dog.
   * @owner: owner of dog.
