@@ -24,15 +24,17 @@ int main(int argc, char *argv[])
 		printf("Error\n");
 		exit(2);
 	}
-	func_ptr = (unsigned char *)main;
 
-	int x = 0;
+	int i;
 
-	if (atoi(argv[1]) > 0)
+	for (i = 0; i < atoi(argv[1]); i++)
 	{
-		while (x < (atoi(argv[1]) - 1))
-			printf("%02hhx ", func_ptr[x++]);
-		printf("%hhx\n", func_ptr[x]);
+		printf("%02hhx", *((char *)main + i));
+		if (i < atoi(argv[1]) - 1)
+			printf(" ");
+		else
+			printf("\n");
 	}
+
 	return (0);
 }
