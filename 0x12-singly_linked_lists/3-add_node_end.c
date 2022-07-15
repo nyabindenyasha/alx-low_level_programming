@@ -4,7 +4,7 @@
 #include "2-strlen.c"
 
 /**
-  * a function that adds a new node at the end of a list.
+  * add_node_end - a function that adds a new node at the end of a list.
   * @head: Linked list.
   * @str: The string.
   * Return: The new node.
