@@ -16,9 +16,7 @@ unsigned int flip_bits(unsigned long int n, unsigned long int m)
 	while (max <= xor)
 	{
 		if (max & xor)
-		{
 			flips++;
-		}
 		max <<= 1;
 	}
 	return (flips);
